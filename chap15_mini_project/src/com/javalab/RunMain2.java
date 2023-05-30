@@ -1,0 +1,41 @@
+package com.javalab;
+
+import java.util.*;
+
+// 콘솔 메뉴 - switch문 사용
+public class RunMain2 {
+
+	public static void main(String[] args) {
+
+		// 키보드에서 입력을 받아들이는 객체
+		Scanner in = new Scanner(System.in);
+		int option;
+		
+		while (true) {
+			System.out.println("번호를 입력하세요 1.덧셈 2.뺄셈 3.나눗셈 4.곱셈");
+			option = Integer.parseInt(in.next()); // 입력받은 문자를 int형으로 변환
+
+			if (option == 1) {
+				System.out.println("1.덧셈");
+			} else if (option == 2) {
+				System.out.println("2.뺄셈");
+			} else if (option == 3) {
+				System.out.println("3.나눗셈");
+			} else if (option == 4) {
+				System.out.println("4.곱셈");
+			} else { // 1,2,3,4 이외의 숫자가 올 경우
+				System.out.println("프로그램이 종료되었습니다.");
+				System.exit(0); // 0-정상적으로 종료
+				break;
+			}
+		}
+		// 자원 반납
+		in.close();
+
+	} // end main
+	
+	private static void askForNumbers() {
+		System.out.println("두 개의 숫자를 입력하세요");
+		System.out.println();
+	}
+}
